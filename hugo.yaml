@@ -1,0 +1,29 @@
+baseURL: "https://najah.me/"
+languageCode: "en-us"
+title: "Najah's Blog"
+theme: "" # We are building a custom minimalist layout, so no external theme is needed!
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  description: "Graphic Designer & Vibecoder"
+  author: "Mohamed Najah"
+  social:
+    github: "https://github.com"
+    twitter: "https://twitter.com"
+    portfolio: "#"
+
+menu:
+  main:
+    - name: "blogs"
+      url: "/posts/"
+      weight: 1
+    - name: "tags"
+      url: "/tags/"
+      weight: 2
+    - name: "search"
+      url: "/search/"
+      weight: 3

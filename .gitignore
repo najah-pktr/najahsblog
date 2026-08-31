@@ -1,0 +1,11 @@
+# Hugo Build & Output
+/public/
+.hugo_build.lock
+resources/_gen/
+
+# Node Dependencies
+/node_modules/
+
+# OS Specific Files
+.DS_Store
+Thumbs.db

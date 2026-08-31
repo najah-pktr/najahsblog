@@ -1,0 +1,89 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d1117;
+    --card-bg: #161b22;
+    --text: #c9d1d9;
+    --text-muted: #8b949e;
+    --border: #30363d;
+    --accent: #58a6ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.6;
+    padding: 2rem 1rem;
+  }
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+  }
+  .logo a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+  nav a:hover {
+    color: var(--accent);
+  }
+  footer {
+    margin-top: 4rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+  a { color: var(--accent); }
+  h1, h2, h3 { color: var(--text); margin-top: 2rem; margin-bottom: 1rem; }
+  p { margin-bottom: 1rem; color: var(--text); }
+  ul { list-style: square; padding-left: 1.2rem; margin-bottom: 1rem; }
+  li { margin-bottom: 0.5rem; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
+  
+  /* Code blocks & inline code styling */
+  code {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--card-bg);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: var(--accent);
+  }
+  pre {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+  }
+  pre code {
+    background-color: transparent;
+    padding: 0;
+    color: var(--text);
+    font-size: 0.85rem;
+    border: none;
+  }
+</style>

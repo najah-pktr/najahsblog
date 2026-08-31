@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1 style="font-size: 1.5rem; margin-bottom: 1.5rem;">// tags</h1>
+<ul style="list-style: none; padding: 0; display: flex; gap: 1rem; flex-wrap: wrap;">
+  {{ range .Data.Terms.Alphabetical }}
+  <li>
+    <a href="{{ .Page.RelPermalink }}" style="background: var(--card-bg); border: 1px solid var(--border); padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; display: inline-block;">
+      <span style="color: var(--accent);">#{{ .Page.Title }}</span> 
+      <span style="color: var(--text-muted); font-size: 0.8rem;">({{ .Count }})</span>
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

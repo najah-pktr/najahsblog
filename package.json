@@ -1,0 +1,12 @@
+{
+  "name": "my-blog",
+  "version": "1.0.0",
+  "scripts": {
+    "hugo": "hugo-extended",
+    "dev": "hugo-extended server -D",
+    "build": "hugo-extended --minify"
+  },
+  "devDependencies": {
+    "hugo-extended": "latest"
+  }
+}

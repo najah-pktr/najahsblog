@@ -1,0 +1,26 @@
+{{ define "main" }}
+<section style="margin-bottom: 3rem;">
+  <h1 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Hi, I'm Najah</h1>
+  <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Graphic Designer &amp; Vibecoder building cool things fast.</p>
+  <div style="font-size: 0.95rem;">
+    {{ .Content }}
+  </div>
+  <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+    <a href="{{ site.Params.social.github }}" target="_blank">[github]</a>
+    <a href="{{ site.Params.social.twitter }}" target="_blank">[twitter]</a>
+    <a href="{{ site.Params.social.portfolio }}" target="_blank">[portfolio]</a>
+  </div>
+</section>
+
+<section>
+  <h2 style="font-size: 1.2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">// recent posts</h2>
+  <ul style="list-style: none; padding: 0;">
+    {{ range first 5 (where site.RegularPages "Section" "posts") }}
+    <li style="margin-bottom: 1rem;">
+      <span style="color: var(--text-muted); font-size: 0.85rem; display: inline-block; width: 100px;">{{ .Date.Format "2006-01-02" }}</span>
+      <a href="{{ .RelPermalink }}" style="text-decoration: none;">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

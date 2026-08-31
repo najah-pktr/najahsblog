@@ -1,0 +1,18 @@
+{{ define "main" }}
+<article>
+  <h1 style="font-size: 1.5rem; margin-bottom: 0.5rem;">{{ .Title }}</h1>
+  <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Published: {{ .Date.Format "2006-01-02" }}</p>
+  
+  {{ with .Params.tags }}
+  <div style="margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+    {{ range . }}
+      <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" style="font-size: 0.75rem; background: var(--card-bg); border: 1px solid var(--border); padding: 0.2rem 0.5rem; border-radius: 4px; text-decoration: none; color: var(--accent);">#{{ . }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <div class="content">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}
