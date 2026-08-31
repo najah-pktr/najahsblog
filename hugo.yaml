@@ -1,7 +1,6 @@
 baseURL: "https://najah.me/"
 languageCode: "en-us"
 title: "Najah's Blog"
-theme: "" # We are building a custom minimalist layout, so no external theme is needed!
 
 markup:
   goldmark:

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
+  "buildCommand": "npx hugo-extended --minify",
   "outputDirectory": "public",
-  "framework": "hugo"
+  "framework": null
 }
