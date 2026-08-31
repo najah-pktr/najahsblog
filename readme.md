@@ -25,7 +25,7 @@
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/najah-pktr/thottingal.git
+   git clone https://github.com/najah-pktr/najahsblog.git
    cd thottingal
    ```
 
