@@ -1,4 +1,4 @@
-baseURL: "https://najah.me/"
+baseURL: "https://najahsblog.vercel.app/"
 languageCode: "en-us"
 title: "Najah's Blog"
 
@@ -11,9 +11,10 @@ params:
   description: "Graphic Designer & Vibecoder"
   author: "Mohamed Najah"
   social:
-    github: "https://github.com"
-    twitter: "https://twitter.com"
-    portfolio: "#"
+    github: "https://github.com/najah-pktr"
+    twitter: "https://twitter.com/najah_pktr"
+    portfolio: "https://mohamednajah.vercel.app"
+    behance: "https://behance.net/mohamednajahpktr"
 
 menu:
   main:

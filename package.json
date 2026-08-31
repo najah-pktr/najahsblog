@@ -1,12 +1,28 @@
 {
   "name": "my-blog",
   "version": "1.0.0",
+
   "scripts": {
     "hugo": "hugo-extended",
     "dev": "hugo-extended server -D",
-    "build": "hugo-extended --minify"
+    "build": "hugo-extended --minify && npx pagefind --site public"
   },
   "devDependencies": {
-    "hugo-extended": "latest"
-  }
+    "hugo-extended": "^0.164.0",
+    "pagefind": "^1.5.2"
+  },
+  "description": "> Minimalist, dark-themed, monospaced portfolio and blog built with **Hugo**, **Node.js**, and custom Go templates.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/najah-pktr/najahsblog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/najah-pktr/najahsblog/issues"
+  },
+  "homepage": "https://github.com/najah-pktr/najahsblog#readme"
 }

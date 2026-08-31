@@ -1,6 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -11,19 +12,35 @@
     --text-muted: #8b949e;
     --border: #30363d;
     --accent: #58a6ff;
+
+    /* Pagefind Dark Terminal Theme Variables Overridden Directly */
+    --pagefind-ui-scale: 0.9;
+    --pagefind-ui-primary: #58a6ff;
+    --pagefind-ui-text: #c9d1d9;
+    --pagefind-ui-background: #161b22;
+    --pagefind-ui-border: #30363d;
+    --pagefind-ui-tag: #161b22;
+    --pagefind-ui-font: 'JetBrains Mono', monospace;
   }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body, html, input, button, textarea, select {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+  }
+
   body {
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: 'JetBrains Mono', monospace;
     line-height: 1.6;
     padding: 2rem 1rem;
   }
+
   .container {
     max-width: 680px;
     margin: 0 auto;
   }
+
   header {
     display: flex;
     justify-content: space-between;
@@ -32,11 +49,13 @@
     padding-bottom: 1rem;
     margin-bottom: 3rem;
   }
+
   .logo a {
     color: var(--text);
     text-decoration: none;
     font-weight: 700;
   }
+
   nav a {
     color: var(--text-muted);
     text-decoration: none;
@@ -44,9 +63,11 @@
     font-size: 0.9rem;
     transition: color 0.2s;
   }
+
   nav a:hover {
     color: var(--accent);
   }
+
   footer {
     margin-top: 4rem;
     border-top: 1px solid var(--border);
@@ -55,14 +76,14 @@
     color: var(--text-muted);
     text-align: center;
   }
+
   a { color: var(--accent); }
-  h1, h2, h3 { color: var(--text); margin-top: 2rem; margin-bottom: 1rem; }
+  h1, h2, h3 { color: var(--text); margin-top: 2rem; margin-bottom: 1rem; font-family: 'JetBrains Mono', monospace; }
   p { margin-bottom: 1rem; color: var(--text); }
   ul { list-style: square; padding-left: 1.2rem; margin-bottom: 1rem; }
   li { margin-bottom: 0.5rem; }
   hr { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
   
-  /* Code blocks & inline code styling */
   code {
     font-family: 'JetBrains Mono', monospace;
     background-color: var(--card-bg);
@@ -71,6 +92,7 @@
     font-size: 0.85rem;
     color: var(--accent);
   }
+
   pre {
     background-color: var(--card-bg) !important;
     border: 1px solid var(--border);
@@ -79,6 +101,7 @@
     margin: 1.5rem 0;
     overflow-x: auto;
   }
+
   pre code {
     background-color: transparent;
     padding: 0;
@@ -86,7 +109,7 @@
     font-size: 0.85rem;
     border: none;
   }
-  /* Blog Image Responsive Styling */
+
   .content img, article img {
     max-width: 100%;
     height: auto;
@@ -97,7 +120,6 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   }
 
-  /* Optional Figure and Caption Styling */
   .content figure, article figure {
     margin: 2rem 0;
     text-align: center;
@@ -107,5 +129,47 @@
     font-size: 0.8rem;
     color: var(--text-muted);
     margin-top: 0.5rem;
+  }
+
+  /* Hard-forced Pagefind Monospace and Dark Theme Styling */
+  .pagened, .pagefind-ui {
+    font-family: 'JetBrains Mono', monospace !important;
+  }
+
+  .pagefind-ui .pagefind-ui__search-input {
+    background-color: #161b22 !important;
+    color: #c9d1d9 !important;
+    border: 1px solid #30363d !important;
+    border-radius: 6px !important;
+    font-family: 'JetBrains Mono', monospace !important;
+  }
+
+  .pagefind-ui .pagefind-ui__search-clear {
+    color: #8b949e !important;
+    background-color: transparent !important;
+  }
+
+  .pagefind-ui .pagefind-ui__result {
+    border-color: #30363d !important;
+  }
+
+  .pagefind-ui .pagefind-ui__result-link {
+    color: #58a6ff !important;
+    font-family: 'JetBrains Mono', monospace !important;
+  }
+
+  .pagefind-ui .pagefind-ui__result-excerpt {
+    color: #8b949e !important;
+    font-family: 'JetBrains Mono', monospace !important;
+  }
+
+  .pagefind-ui .pagefind-ui__message {
+    color: #c9d1d9 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+  }
+
+  .pagefind-ui mark {
+    background-color: #58a6ff33 !important;
+    color: #58a6ff !important;
   }
 </style>
