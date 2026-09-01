@@ -2,26 +2,65 @@
 <html lang="{{ site.LanguageCode }}">
 <head>
   {{ partial "head.meta.html" . }}
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 150 }}{{ end }}">
+<meta name="author" content="Mohamed Najah Pookkottur">
+
+<!-- Open Graph / Social Sharing -->
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 150 }}{{ end }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+      <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const toggleBtn = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector("#nav-menu");
+
+        if (toggleBtn && navMenu) {
+          toggleBtn.addEventListener("click", function() {
+            navMenu.classList.toggle("active");
+          });
+        }
+      });
+      </script>
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "{{ .Title }}",
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Person",
+    "name": "Mohamed Najah Pookkottur"
+  },
+  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 150 }}{{ end }}"
+}
+</script>
 </head>
 <body>
   <div class="container">
-    <header>
-      <div class="logo">
-        <a href="{{ "/" | relURL }}">najah's blog</a>
-      </div>
-      <nav>
-        {{ range site.Menus.main }}
-          <a href="{{ .URL }}">{{ .Name }}</a>
-        {{ end }}
-      </nav>
-    </header>
+<header>
+  <div class="logo"><a href="{{ .Site.BaseURL }}">najah's blog</a></div>
+  
+  <!-- Hamburger Toggle Button -->
+  <button class="menu-toggle" aria-label="Toggle Navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav id="nav-menu">
+    <a href="/posts/">blogs</a>
+    <a href="/tags/">tags</a>
+    <a href="/search/">search</a>
+  </nav>
+</header>
 
     <main>
       {{ block "main" . }}{{ end }}
     </main>
 
     <footer>
-      <p>&copy; {{ now.Year }} &bull; Built by Najah with Hugo &amp; Self made CSS</p>
+      <p>&copy; {{ now.Year }} &bull; Built by Najah with ❤️, Hugo &amp; Custom CSS</p>
     </footer>
   </div>
 </body>
