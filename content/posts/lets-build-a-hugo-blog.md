@@ -1,9 +1,13 @@
 +++
-title = "How I Built My First Hugo Website Using Gemini & Vibecoding"
+title = "Let's build a Hugo Blog"
 date = 2026-08-31
-tags = ["hugo", "vibecoding", "webdev", "ai"]
+tags = ["hugo", "blog", "vibecoding", "ai","gemini"]
 draft = false
 +++
+
+Tbh guys, I like blogging, writing things on the internet, and helping others by it, so I thought why not make one. I thought about the stack: I didn't want to make it with Supabase—which will pause your project every then and there—or any other service that will pay you filthy money. Then I saw this guy's blog: his name is Santhosh Thottingal, a senior Malayali developer and a big open source lover. His blog at `thottingal.in` (don't forget to check his website, its cool) is made with Hugo, and I knew it is a static site generator which turns my Markdown files into posts and pages. I couldn't stop; I directly went to Gemini and told it I want one too, in my favourite black and blue theme with monospace fonts. It told me how to make one step by step and I made it! Yeah, I made it!
+
+Tbh, I now feel like I am using legacy tech from 2004, but it isn't—Hugo was made in 2013 by some guy called Steve Francia, who made it because he was bored with Jekyll, which was another SSG back then. Anyways, I am happy with this, and here is how you can do it too!
 
 Building websites used to mean spending hours configuring complex templates, wrestling with build tools, and manually debugging CSS layouts. But when you lean into **vibecoding**—focusing entirely on the high-level architecture, user experience, and aesthetic while letting AI write the boilerplate—you can ship things at lightning speed.
 
@@ -60,12 +64,12 @@ npx hugo-extended new site . --format yaml --force
 Instead of fighting bloated third-party themes, I had Gemini generate a custom, hyper-minimalist layout using Go templates.
 
 1. Created the layout directories:
+
 ```cmd
 mkdir layouts\_default
 mkdir layouts\partials
 
 ```
-
 
 2. **The Meta Head (`layouts/partials/head.meta.html`):** Injected Google Fonts (`JetBrains Mono`) and setup custom CSS variables for the dark theme.
 3. **The Base Shell (`layouts/_default/baseof.html`):** Configured the global frame with a terminal-style header (`> ~ /home`), navigation menus pointing to blogs, tags, and search, and a clean footer.
@@ -107,3 +111,7 @@ npm run dev
 ```
 
 Head over to `http://localhost:1313` in your browser, and your terminal-inspired dark theme is ready to go. Vibecoding at its finest—architecture planned, code generated, and shipped in minutes.
+
+---
+
+Don't forget to share what you think about this website through my mail at `muhammadnajahp7 at gmail dot com`!

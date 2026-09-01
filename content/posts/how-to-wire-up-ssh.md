@@ -7,7 +7,7 @@ draft = false
 
 Let’s be honest: setting up SSH keys for Git and GitHub is one of those things you only do every once in a while, which makes it remarkably easy to forget. I built this quick guide directly into my blog so I never have to hunt around the web for the exact commands again.
 
-Here is the exact, no-fluff workflow I use to wire up my local machine to GitHub securely via SSH.
+Here is the exact, no-fluff workflow I use to wire up my local machine to GitHub securely via SSH. This worked for Windows 11 and I don't know how it is gonna work for others anyways
 
 ---
 

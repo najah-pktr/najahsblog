@@ -4,6 +4,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll("main img, article img");
+    images.forEach(img => {
+      if (img.alt && !img.parentNode.matches("figure")) {
+        const figure = document.createElement("figure");
+        const figcaption = document.createElement("figcaption");
+        figcaption.textContent =  img.alt;
+        
+        img.parentNode.insertBefore(figure, img);
+        figure.appendChild(img);
+        figure.appendChild(figcaption);
+      }
+    });
+  });
+</script>
 <style>
   :root {
     --bg: #0d1117;
@@ -110,7 +126,8 @@
     border: none;
   }
 
-  .content img, article img {
+/* Universal Blog & Home Image Responsive Styling */
+  .content img, article img, main img, .home img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -171,5 +188,19 @@
   .pagefind-ui mark {
     background-color: #58a6ff33 !important;
     color: #58a6ff !important;
+  }
+  /* Auto-generate captions from image alt text */
+  main img {
+    position: relative;
+  }
+  
+  main img[alt]::after {
+    content: attr(alt);
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.30rem;
+    font-family: 'JetBrains Mono', monospace;
   }
 </style>
