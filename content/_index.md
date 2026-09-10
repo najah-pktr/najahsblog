@@ -1,7 +1,7 @@
 +++
 title = "Home"
 +++
-![](./static/me.jpg)
+![](me.jpg)
 hey that's me, i am a graphic designer who designs and codes and specializes in high-level architecture, user experience, experimenting new techs and aesthetic web apps. this blog is where i document my design notes, code breakdowns, and thoughts. don't hesitate to follow me on instagram at najah underscore pktr or mail me through muhammadnajahp7 at gmail dot com. i am now free and available for freelance or whatever for positions spanning from creative directing to full-stack web developer. i have hundreds of hobbies i can't count all of them, but i might write a blog on them, so just to let you know, here are some of my hobbies. if you feel after reading these that we are a gang, don't forget to peep into my mail
 - lower case typing (coz it's hassle-free and i am anti-capitalist, though i don't use low caps every time)
 - photography (i like it, but i don't have a good camera to capture anything, but i do sometimes)
